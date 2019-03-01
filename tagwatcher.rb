@@ -5,6 +5,12 @@ require 'json'
 require 'nationbuilder'
 require 'slack-notifier'
 
+create_table(:tags) do
+      integer :id
+      jsonb :data
+    end
+
+
 def get_old_tags(file)
   Dir.mkdir('cache') unless File.exists?('cache')
   Dir.mkdir('cache/email') unless File.exists?('cache/email')
