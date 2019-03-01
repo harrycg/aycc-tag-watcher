@@ -178,6 +178,8 @@ if __FILE__ == $0
   old_tags = get_old_tags(FILE)
   new_tags = get_new_tags(all_tags, old_tags)
 
+  puts "#{all_tags}"
+  
   update_cache(all_tags, FILE)
 
   if new_tags.any? && new_tags != all_tags
